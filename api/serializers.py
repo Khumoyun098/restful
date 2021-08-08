@@ -7,23 +7,5 @@ from dev.models import Car
 class CarSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Car
-        fields = [
-            'name',
-            'model',
-            'price',
-            'manfactured_year',
-            'image',
-            'horsepower',
-            'fuel_type'
-        ]
+        fields = "__all__"
 
-# class UserSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = User
-#         fields = ['url', 'username', 'email', 'groups']
-#
-#
-# class GroupSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = Group
-#         fields = ['url', 'name']
