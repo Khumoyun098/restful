@@ -9,8 +9,6 @@ class CarViewSet(viewsets.ModelViewSet):
     queryset = Car.objects.all().order_by('-created_time')
     serializer_class = CarSerializer
 
-    
-
 #
 #
 # class UserViewSet(viewsets.ModelViewSet):
