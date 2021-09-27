@@ -138,8 +138,10 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
-    'DEFAULT_PAGINATION_CLASS': 'core.utils.pagination.CustomPagination',
+    'DEFAULT_PAGINATION_CLASS': 'utils.pagination.CustomPagination',
     'PAGE_SIZE': 50
 }
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+print("DEBUG STATUS: ", DEBUG)
