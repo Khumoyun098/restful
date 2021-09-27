@@ -4,18 +4,9 @@ services:
   core:
     build: .
     ports:
-      - '1243:1243'
-    command: daphne -b 0.0.0.0 -p 1243 core.asgi:application
-#    env_file:
-#      - .env
+      - '5550:5550'
+    command: daphne -b 0.0.0.0 -p 5550 core.asgi:application
+    env_file:
+      - .env
     volumes:
       - .:/core
-    networks:
-      - internal
-      - global
-networks:
-  global:
-    driver: bridge
-  internal:
-    driver: bridge
-    internal: true
