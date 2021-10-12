@@ -19,5 +19,6 @@ router.register(prefix='cars', viewset=views.CarViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('login/', views.LoginView.as_view(), name='login'),
     path('docs/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc')
 ]
